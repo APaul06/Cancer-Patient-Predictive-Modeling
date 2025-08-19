@@ -1,0 +1,27 @@
+Setup
+
+Requirements
+Python 3.8+
+PostgreSQL database with a table named cancerdata
+
+Install dependencies
+pip install pandas sqlalchemy scikit-learn matplotlib seaborn psycopg2
+
+Configure database connection
+Edit the connection string in your script:
+engine = create_engine('postgresql://username:password@localhost:5432/your_db_name')
+
+The database table should include the following fields:
+patient_id
+target_severity_score
+age, gender, country_region, year, genetic_risk, air_pollution, alcohol_use, smoking, obesity_level, cancer_type, cancer_stage, treatment_cost_usd, survival_years
+
+Example output:
+Mean Squared Error: 2.35
+R² Score: 0.87
+
+Interactive prediction
+Run
+python main.py
+
+Then enter patient details when prompted.
